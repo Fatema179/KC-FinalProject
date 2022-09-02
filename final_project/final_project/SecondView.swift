@@ -50,6 +50,7 @@ struct SecondView: View {
                                 Text("befor").tag("befor")
                                 Text("during").tag("during")
                                 Text("after").tag("after")
+                                Text("none").tag("none")
 
                             })
                     }.padding()
@@ -65,6 +66,7 @@ struct SecondView: View {
                                 Text("befor").tag("befor")
                                 Text("during").tag("during")
                                 Text("after").tag("after")
+                                Text("none").tag("none")
 
                             })
                     }.padding()
@@ -80,6 +82,7 @@ struct SecondView: View {
                                 Text("befor").tag("befor")
                                 Text("during").tag("during")
                                 Text("after").tag("after")
+                                Text("none").tag("none")
 
                             })
                     }.padding()
@@ -96,6 +99,7 @@ struct SecondView: View {
                         content: {
                             Text("PM").tag("PM")
                             Text("AM").tag("AM")
+                            Text("both").tag("both")
                         })
                 }.padding()
                 Button {
@@ -103,8 +107,10 @@ struct SecondView: View {
                 } label: {
                     Text("Save")
                         .font(.title)
-                }
-
+                        .frame(width: 100, height: 50)
+                        .foregroundColor(.white)
+                        .background(.gray)
+                        .cornerRadius(20)                }
             }
         }
     }
