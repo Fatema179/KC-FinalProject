@@ -31,12 +31,25 @@ struct SecondView: View {
                         .font(.system(size: 50))
                 }.padding()
                 Spacer()
-                inputview(titel: "Pill Name", inPut: Name)
+                ScrollView{
+                HStack{
+                    Text("pill name:")
+                    TextField("pillname", text: $Name)
+                }
                 
-              inputview(titel: "Amount", inPut: number1)
+                    HStack{
+                        Text("Amount:")
+                        TextField("pillname", text: $number1)
+                    }
                 
-                    inputview(titel: "how long", inPut: number2)
-                inputview(titel: "How many times", inPut: number3)
+                    HStack{
+                        Text("how long:")
+                        TextField("pillname", text: $number2)
+                    }
+                    HStack{
+                        Text("times:")
+                        TextField("pillname", text: $number3)
+                    }
                 VStack {
                     HStack{
                         Text("Breakfast:")
@@ -87,7 +100,10 @@ struct SecondView: View {
                             })
                     }.padding()
                 }
-                inputview(titel: "Notification", inPut: Time)
+                    HStack{
+                        Text("notification:")
+                        TextField("pillname", text: $time)
+                    }
                 HStack{
                     Text("Day/Night:")
                         .font(.title2)
@@ -110,7 +126,9 @@ struct SecondView: View {
                         .frame(width: 100, height: 50)
                         .foregroundColor(.white)
                         .background(.gray)
-                        .cornerRadius(20)                }
+                        .cornerRadius(20)
+                }
+                }
             }
         }
     }
@@ -121,5 +139,3 @@ struct SecondView_Previews: PreviewProvider {
         SecondView(maReminders: .constant([MRModel(pillName: "zocor", amount: 1.5, howLong: 30, times: 3, breakfast: "after", lunch: "during", dinner: "befor", notification: "1:30", dayNight: "pm")]))
     }
 }
-
-
