@@ -14,7 +14,6 @@ struct SecondView: View {
     @State var number1 = ""
     @State var number2 = ""
     @State var number3 = ""
-    @State var time = ""
     @State var dayNight = ""
     @State var selection1: String = ""
     @State var selection2: String = ""
@@ -34,22 +33,25 @@ struct SecondView: View {
                 ScrollView{
                 HStack{
                     Text("pill name:")
+                        .font(.title2)
                     TextField("pillname", text: $Name)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 250, height: 25)
                         .background(.white)
-                }
+                }.padding()
                 
                     HStack{
                         Text("Amount:")
+                            .font(.title2)
                         TextField("pillname", text: $number1)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 250, height: 25)
                             .background(.white)
-                    }
+                    }.padding()
                 
                     HStack{
                         Text("how long:")
+                            .font(.title2)
                         TextField("pillname", text: $number2)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 250, height: 25)
@@ -57,6 +59,7 @@ struct SecondView: View {
                     }.padding()
                     HStack{
                         Text("times:")
+                            .font(.title2)
                         TextField("pillname", text: $number3)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 250, height: 25)
