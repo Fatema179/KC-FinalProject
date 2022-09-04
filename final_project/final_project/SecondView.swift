@@ -35,21 +35,33 @@ struct SecondView: View {
                 HStack{
                     Text("pill name:")
                     TextField("pillname", text: $Name)
+                        .textFieldStyle(.roundedBorder)
+                        .frame(width: 250, height: 25)
+                        .background(.white)
                 }
                 
                     HStack{
                         Text("Amount:")
                         TextField("pillname", text: $number1)
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 250, height: 25)
+                            .background(.white)
                     }
                 
                     HStack{
                         Text("how long:")
                         TextField("pillname", text: $number2)
-                    }
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 250, height: 25)
+                            .background(.white)
+                    }.padding()
                     HStack{
                         Text("times:")
                         TextField("pillname", text: $number3)
-                    }
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 250, height: 25)
+                            .background(.white)
+                    }.padding()
                 VStack {
                     HStack{
                         Text("Breakfast:")
@@ -102,8 +114,12 @@ struct SecondView: View {
                 }
                     HStack{
                         Text("notification:")
-                        TextField("pillname", text: $time)
-                    }
+                            .font(.title2)
+                        TextField("pillname", text: $Time)
+                            .textFieldStyle(.roundedBorder)
+                            .frame(width: 250, height: 25)
+                            .background(.white)
+                    }.padding()
                 HStack{
                     Text("Day/Night:")
                         .font(.title2)
