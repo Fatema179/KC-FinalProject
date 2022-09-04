@@ -32,9 +32,9 @@ struct SecondView: View {
                 Spacer()
                 ScrollView{
                 HStack{
-                    Text("pill name:")
+                    Text("Pill Name:")
                         .font(.title2)
-                    TextField("pillname", text: $Name)
+                    TextField("pill name...", text: $Name)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 250, height: 25)
                         .background(.white)
@@ -43,24 +43,24 @@ struct SecondView: View {
                     HStack{
                         Text("Amount:")
                             .font(.title2)
-                        TextField("pillname", text: $number1)
+                        TextField("how many pills...", text: $number1)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 250, height: 25)
                             .background(.white)
                     }.padding()
                 
                     HStack{
-                        Text("how long:")
+                        Text("Time Period:")
                             .font(.title2)
-                        TextField("pillname", text: $number2)
+                        TextField("for how long...", text: $number2)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 250, height: 25)
                             .background(.white)
                     }.padding()
                     HStack{
-                        Text("times:")
+                        Text("How Many Times?:")
                             .font(.title2)
-                        TextField("pillname", text: $number3)
+                        TextField("how many times a day...", text: $number3)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 250, height: 25)
                             .background(.white)
@@ -116,9 +116,9 @@ struct SecondView: View {
                     }.padding()
                 }
                     HStack{
-                        Text("notification:")
+                        Text("Notification:")
                             .font(.title2)
-                        TextField("pillname", text: $Time)
+                        TextField("time..", text: $Time)
                             .textFieldStyle(.roundedBorder)
                             .frame(width: 250, height: 25)
                             .background(.white)
@@ -138,7 +138,7 @@ struct SecondView: View {
                         })
                 }.padding()
                 Button {
-                    maReminders.append(MRModel(pillName: Name, amount: Double(number1) ?? 0.0, howLong: Int(number2) ?? 0, times: Int(number3) ?? 0, breakfast: selection1, lunch: selection2, dinner: selection3, notification: Time, dayNight: dayNight))
+                    maReminders.append(MRModel(pillName: Name, amount: Int(number1) ?? 0, howLong: Int(number2) ?? 0, times: Int(number3) ?? 0, breakfast: selection1, lunch: selection2, dinner: selection3, notification: Time, dayNight: dayNight))
                 } label: {
                     Text("Save")
                         .font(.title)
@@ -155,6 +155,6 @@ struct SecondView: View {
 
 struct SecondView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondView(maReminders: .constant([MRModel(pillName: "zocor", amount: 1.5, howLong: 30, times: 3, breakfast: "after", lunch: "during", dinner: "befor", notification: "1:30", dayNight: "pm")]))
+        SecondView(maReminders: .constant([MRModel(pillName: "zocor", amount: 1, howLong: 30, times: 3, breakfast: "after", lunch: "during", dinner: "befor", notification: "1:30", dayNight: "pm")]))
     }
 }

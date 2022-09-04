@@ -38,8 +38,8 @@ struct ContentView: View {
                     }.padding()
                     List(myReminders){ myReminder in
                         HStack{
-                            Text("\(myReminder.pillName)")
-                            Text("\(myReminder.notification)")
+                            Text("\(myReminder.pillName), \(myReminder.notification), \(myReminder.amount)")
+                            
                         }.padding()
                     }
                 }

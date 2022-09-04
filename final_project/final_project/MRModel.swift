@@ -9,7 +9,7 @@ import Foundation
 struct MRModel: Identifiable{
     let id = UUID()
     var pillName: String
-    var amount: Double
+    var amount: Int
     var howLong: Int
     var times: Int
     var breakfast: String
